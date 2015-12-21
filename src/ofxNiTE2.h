@@ -106,6 +106,9 @@ public:
 	
 	void setSkeletonSmoothingFactor(float factor) { user_tracker.setSkeletonSmoothingFactor(factor); }
 	float getSkeletonSmoothingFactor(float factor) { return user_tracker.getSkeletonSmoothingFactor(); }
+    nite::Status convertJointCoordinatesToDepth(float x, float y, float z, float* pOutX, float* pOutY) const {
+        return user_tracker.convertJointCoordinatesToDepth(x, y, z, pOutX, pOutY);
+    }
 	
 	nite::UserTracker get() { return user_tracker; }
 	const nite::UserTracker& get() const { return user_tracker; }
